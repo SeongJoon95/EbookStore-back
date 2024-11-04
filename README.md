@@ -82,8 +82,8 @@
 
 1. **프로젝트 클론**
    ```bash
-   git clone https://github.com/your-username/online-bookstore.git
-   cd online-bookstore
+   git clone https://github.com/SeongJoon95/EbookStore-back.git
+   ```
 
 ## Dependencies
 
