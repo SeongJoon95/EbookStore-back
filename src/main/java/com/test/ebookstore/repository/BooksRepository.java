@@ -63,4 +63,7 @@ public interface BooksRepository extends JpaRepository<BooksEntity, Integer> {
     nativeQuery = true
     )
     List<ListBooksResultSet> listBooksAuthorName(@Param("categoriesId") String categoriesId);
+
+    // 책 고유번호 판단유무
+    boolean existsByBooksId(Integer booksId);
 }

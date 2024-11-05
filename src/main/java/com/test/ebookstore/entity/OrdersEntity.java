@@ -1,6 +1,7 @@
 package com.test.ebookstore.entity;
 
-import com.test.ebookstore.dto.request.orders.OrdersRequestDto;
+import com.test.ebookstore.dto.request.orders.AfterPaymentRequestDto;
+import com.test.ebookstore.dto.request.orders.BeforePaymentRequestDto;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -31,7 +32,7 @@ public class OrdersEntity {
     private String state;
     private String userId;
     
-    public OrdersEntity(OrdersRequestDto dto){
+    public OrdersEntity(BeforePaymentRequestDto dto){
         this.ordersDate = dto.getOrdersDate();
         this.totalPrice = dto.getTotalPrice();
         this.userId = dto.getUserId();

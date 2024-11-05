@@ -9,7 +9,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class OrdersRequestDto {
+public class BeforePaymentRequestDto {
     
     @NotBlank
     @Pattern(regexp = "^\\d{4}-\\d{2}-\\d{2}$")
