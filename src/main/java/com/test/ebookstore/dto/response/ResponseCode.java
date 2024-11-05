@@ -18,6 +18,7 @@ public interface ResponseCode {
     String NO_EXIST_ACCOMMODATION_NAME = "NAN";
     String NO_EXIST_BOOKMARK = "NEB";
     String NO_EXIST_PAYMENT_ID = "NEPI";
+    String NO_VALUE = "NV";
 
     // 401 Error
     String AUTHENTICATION_FAIL = "AF";

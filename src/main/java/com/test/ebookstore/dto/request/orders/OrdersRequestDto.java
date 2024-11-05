@@ -16,7 +16,5 @@ public class OrdersRequestDto {
     private String ordersDate; // 주문날짜
     private Integer totalPrice; // 총금액
     @NotBlank
-    private String state; // 상태
-    @NotBlank
     private String userId; // 유저Id
 }

@@ -21,7 +21,7 @@ public class OderController {
     private final OrderService orderService;
 
     @PostMapping("/orders")
-    // 주문정보 저장
+    // 결제전
     public ResponseEntity<ResponseDto> orders(
         @RequestBody @Valid OrdersRequestDto requestBody
     ){

@@ -42,15 +42,22 @@ public class ResponseDto {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(responseBody);
     }
 
-    // 데이터베이스 오류 응답을 반환.
-    public static ResponseEntity<ResponseDto> databaseError(){
-        ResponseDto responseBody = new ResponseDto(ResponseCode.DATABASE_ERROR, ResponseMessage.DATABASE_ERROR);
-        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(responseBody);
-    }
-
+    
     // 두 값이 같이 않을 경우
     public static ResponseEntity<ResponseDto> notMatchValue(){
         ResponseDto responseBody = new ResponseDto(ResponseCode.NOT_MATCH_VALUE, ResponseMessage.NOT_MATCH_VALUE);
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(responseBody);
+    }
+
+    // 없는 값일 경우
+    public static ResponseEntity<ResponseDto> noValues(){
+        ResponseDto responseBody = new ResponseDto(ResponseCode.NO_VALUE, ResponseMessage.NO_VALUE);
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(responseBody);
+    }
+
+    // 데이터베이스 오류 응답을 반환.
+    public static ResponseEntity<ResponseDto> databaseError(){
+        ResponseDto responseBody = new ResponseDto(ResponseCode.DATABASE_ERROR, ResponseMessage.DATABASE_ERROR);
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(responseBody);
     }
 }

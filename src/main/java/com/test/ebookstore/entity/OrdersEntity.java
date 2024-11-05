@@ -7,6 +7,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -26,13 +27,20 @@ public class OrdersEntity {
     private Integer ordersId;
     private String ordersDate;
     private Integer totalPrice;
+    @Column(nullable = false)
     private String state;
     private String userId;
     
     public OrdersEntity(OrdersRequestDto dto){
         this.ordersDate = dto.getOrdersDate();
         this.totalPrice = dto.getTotalPrice();
-        this.state = dto.getState();
         this.userId = dto.getUserId();
+    }
+
+    @PrePersist
+    public void proPersist(){
+        if(this.state == null) {
+            this.state = "결제대기";
+        }
     }
 }

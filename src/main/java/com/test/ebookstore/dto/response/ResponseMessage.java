@@ -18,6 +18,7 @@ public interface ResponseMessage {
     String NO_EXIST_ACCOMMODATION_NAME = "No exist accommodation name.";
     String NO_EXIST_BOOKMARK = "No exist BookMark id And accommodation name";
     String NO_EXIST_PAYMENT_ID ="No exist Payment Id";
+    String NO_VALUE = "No Value.";
 
     // 401 Error
     String AUTHENTICATION_FAIL = "Authentication fail.";
