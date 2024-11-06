@@ -2,6 +2,7 @@ package com.test.ebookstore.entity;
 
 import com.test.ebookstore.dto.request.orders.AfterPaymentRequestDto;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -22,8 +23,10 @@ public class OrderItemsEntity {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer orderItemsId; // 주문상세고유번호
+    @Column(name = "orderitems_id")
+    private Integer orderitemsId; // 주문상세고유번호
     private Integer ordersId; // 주문 고유번호
+    @Column(name = "books_id")
     private Integer booksId; // 책 고유번호
     private Integer orderitemsCount; // 수량
 

@@ -42,6 +42,11 @@ public class ResponseDto {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(responseBody);
     }
 
+    // 리뷰 유효성 검사(유저Id,책Id) 있을경우
+    public static ResponseEntity<ResponseDto> duplicatedReviews(){
+        ResponseDto responseBody = new ResponseDto(ResponseCode.DUPLICATED_REVIEWS, ResponseMessage.DUPLICATED_REVIEWS);
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(responseBody);
+    }
     
     // 두 값이 같이 않을 경우
     public static ResponseEntity<ResponseDto> notMatchValue(){
@@ -52,6 +57,18 @@ public class ResponseDto {
     // 없는 값일 경우
     public static ResponseEntity<ResponseDto> noValues(){
         ResponseDto responseBody = new ResponseDto(ResponseCode.NO_VALUE, ResponseMessage.NO_VALUE);
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(responseBody);
+    }
+
+    // BooksId 가 없을경우
+    public static ResponseEntity<ResponseDto> noValuesBookId(){
+        ResponseDto responseBody = new ResponseDto(ResponseCode.NO_VALUE_BOOK_ID, ResponseMessage.NO_VALUE_BOOK_ID);
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(responseBody);
+    }
+
+    // UserId 가 없을경우
+    public static ResponseEntity<ResponseDto> noValueUserId(){
+        ResponseDto responseBody = new ResponseDto(ResponseCode.NO_VALUE_USER_ID, ResponseMessage.NO_VALUE_USER_ID);
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(responseBody);
     }
 

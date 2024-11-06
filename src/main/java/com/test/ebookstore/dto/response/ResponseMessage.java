@@ -9,6 +9,7 @@ public interface ResponseMessage {
     String DUPLICATED_USER_ID = "Duplicated user id.";
     String DUPLICATED_EMAIL_ID = "Duplicated user Email.";
     String DUPLICATED_GUEST_TEL_NUMBER = "Duplicated guest telNumber.";
+    String DUPLICATED_REVIEWS = "Duplicated Reviews.";
     String NO_EXIST_GUEST_ID = "No exist guest Id.";
     String NO_EXIST_TELNUMBER = "No exist telNumber.";
     String NO_EXIST_Id = "No exist id.";
@@ -19,7 +20,8 @@ public interface ResponseMessage {
     String NO_EXIST_BOOKMARK = "No exist BookMark id And accommodation name";
     String NO_EXIST_PAYMENT_ID ="No exist Payment Id";
     String NO_VALUE = "No Value.";
-
+    String NO_VALUE_BOOK_ID = "No Value Book Id.";
+    String NO_VALUE_USER_ID = "No Value User Id.";
     // 401 Error
     String AUTHENTICATION_FAIL = "Authentication fail.";
     String TEL_AUTH_FAIL = "Tel number authentication failed.";

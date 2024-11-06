@@ -8,4 +8,11 @@ import com.test.ebookstore.entity.ReviewsEntity;
 @Repository
 public interface ReviewsRepository extends JpaRepository<ReviewsEntity, Integer>{
     
+    
+    boolean existsByUserIdAndBooksId(String userId, Integer booksId);
+
+    ReviewsEntity findByBooksId(Integer booksId);
+    
+    ReviewsEntity findByUserId(String userId);
+
 }

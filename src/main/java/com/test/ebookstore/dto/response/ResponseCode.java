@@ -9,6 +9,7 @@ public interface ResponseCode {
     String DUPLICATED_USER_ID = "DI";
     String DUPLICATED_EMAIL_ID = "DE";
     String DUPLICATED_GUEST_TEL_NUMBER = "DT";
+    String DUPLICATED_REVIEWS = "DR";
     String NO_EXIST_GUEST_ID = "NGI"; 
     String NO_EXIST_TELNUMBER = "NT";
     String NO_EXIST_Id = "NI";
@@ -19,6 +20,8 @@ public interface ResponseCode {
     String NO_EXIST_BOOKMARK = "NEB";
     String NO_EXIST_PAYMENT_ID = "NEPI";
     String NO_VALUE = "NV";
+    String NO_VALUE_BOOK_ID = "NVBI";
+    String NO_VALUE_USER_ID = "NVUI";
 
     // 401 Error
     String AUTHENTICATION_FAIL = "AF";

@@ -1,6 +1,5 @@
 package com.test.ebookstore.entity;
 
-import com.test.ebookstore.dto.request.orders.AfterPaymentRequestDto;
 import com.test.ebookstore.dto.request.orders.BeforePaymentRequestDto;
 
 import jakarta.persistence.Column;

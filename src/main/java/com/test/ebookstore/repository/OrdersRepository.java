@@ -9,11 +9,11 @@ import org.springframework.stereotype.Repository;
 
 import com.test.ebookstore.entity.OrdersEntity;
 import com.test.ebookstore.repository.resultSet.PaymentStateResultSet;
-
 @Repository
 public interface OrdersRepository extends JpaRepository<OrdersEntity, Integer> {
     
     OrdersEntity findByOrdersId(Integer ordersId);
+    
     // 주문번호 유효성검사
     boolean existsByOrdersId(Integer ordersId);
 
@@ -38,4 +38,10 @@ public interface OrdersRepository extends JpaRepository<OrdersEntity, Integer> {
     nativeQuery = true)
     List<PaymentStateResultSet> listPaymentState(@Param("ordersId") Integer ordersId);
 
+    @Query(value = 
+    "SELECT * FROM orders " +
+    "WHERE user_id = :userId " +
+    "AND state = \"결제완료\" " ,
+    nativeQuery = true)
+    OrdersEntity findByUserId(@Param("userId") String UserId);
 }
